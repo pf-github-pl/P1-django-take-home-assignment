@@ -18,7 +18,7 @@ class Command(BaseCommand):
             ]
             for _, row in food_trucks.iterrows():
                 print(row.to_dict())
-                FoodTruck.objects.create(**row.to_dict())
+                FoodTruck.objects.get_or_create(**row.to_dict())
         except Exception as e:
             raise CommandError(f'Error occurred while processing CSV file: {e}') from e
 
