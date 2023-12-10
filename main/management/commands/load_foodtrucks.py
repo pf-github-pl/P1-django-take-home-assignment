@@ -16,10 +16,12 @@ class Command(BaseCommand):
             food_trucks.columns = [
                 'applicant', 'facility_type', 'address', 'latitude', 'longitude', 'food_items', 'status'
             ]
+            i = 0
             for _, row in food_trucks.iterrows():
-                print(row.to_dict())
-                FoodTruck.objects.get_or_create(**row.to_dict())
+                FoodTruck.objects.create(**row.to_dict())
+                print(f'Created FoodTruck with data {row.to_dict()}')
+                i += 1
         except Exception as e:
             raise CommandError(f'Error occurred while processing CSV file: {e}') from e
 
-        self.stdout.write(self.style.SUCCESS('Successfully loaded data into FoodTruck model'))
+        self.stdout.write(self.style.SUCCESS(f'Successfully loaded {i} trucks into FoodTruck model.'))
