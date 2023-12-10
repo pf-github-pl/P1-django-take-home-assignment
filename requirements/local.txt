@@ -1,0 +1,17 @@
+-r ./base.txt
+
+django-debug-toolbar==4.2.0  # https://django-debug-toolbar.readthedocs.io/en/latest/
+
+# Code quality
+# ------------------------------------------------------------------------------
+pylint-django==2.5.5 # https://github.com/PyCQA/pylint-django
+black==23.11.0  # https://github.com/ambv/black
+flake8==6.1.0  # https://github.com/PyCQA/flake8
+pre-commit==3.6.0  # https://github.com/pre-commit/pre-commit
+coverage==7.3.2  # https://github.com/nedbat/coveragepypytest==7.4.0
+
+# Testing
+# ------------------------------------------------------------------------------
+pytest-django==4.7.0  # https://github.com/pytest-dev/pytest-django
+pytest-sugar==0.9.7  # https://github.com/Teemu/pytest-sugar
+pytest-cov==4.1.0
