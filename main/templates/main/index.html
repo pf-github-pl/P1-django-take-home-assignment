@@ -25,6 +25,11 @@
         <p>{{ food_truck.food_items }}</p>
         <p>{{ food_truck.address }}</p>
         <p>{{ food_truck.distance|floatformat:2 }} meters</p>
+        <a href="https://www.google.com/maps/search/?api=1&query={{ food_truck.latitude }},{{ food_truck.longitude }}"
+            target="_blank"
+            class="btn btn-time-primary rounded-pill w-100">
+            Show on map
+        </a>
     </div>
 </div>
 {% endfor %}
