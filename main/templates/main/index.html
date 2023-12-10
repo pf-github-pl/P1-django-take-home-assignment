@@ -15,10 +15,12 @@
 {% crispy form  %}
 
 {% if food_trucks_nearby %}
+<br>
+<h3>Food trucks nearby (from closest):</h3>
 {% for food_truck in food_trucks_nearby %}
 <div class="container col col-md justify-content-center panel-background mb-2">
     <div class="row">
-        <h3>{{ food_truck.applicant }}</h3>
+        <h4>{{ food_truck.applicant }}</h4>
         <p>{{ food_truck.facility_type }}</p>
         <p>{{ food_truck.food_items }}</p>
         <p>{{ food_truck.address }}</p>
