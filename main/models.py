@@ -16,7 +16,6 @@ class FoodTruck(Timestamped):
     latitude = models.DecimalField(max_digits=10, decimal_places=7)
     longitude = models.DecimalField(max_digits=10, decimal_places=7)
     food_items = models.CharField(max_length=1000, blank=True, null=True)
-    dayshours = models.CharField(max_length=100, blank=True, null=True)
     status = models.CharField(max_length=100, blank=True, null=True)
     active = models.BooleanField(default=True)
 
