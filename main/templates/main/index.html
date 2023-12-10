@@ -7,9 +7,12 @@
 {% block title %}{% endblock %}
 
 {% block page_content %}
-<button type="button" class="btn btn-light rounded-pill w-100 my-2" onclick="getLocation()">Retrieve current location</button>
+<h1>San Francisco<br>Food trucks locator</h1>
+<p>Find five food trucks nearby</p>
+<br>
+<button type="button" class="btn btn-dark rounded-pill w-100 my-2" onclick="getLocation()">Retrieve your current location</button>
+<p>or type in your location data manually:</p>
 {% crispy form  %}
-
 
 {% if food_trucks_nearby %}
 {% for food_truck in food_trucks_nearby %}
