@@ -16,7 +16,13 @@ def index(request):
         form = LocationForm(request.POST)
         if form.is_valid():
 
-            food_trucks = FoodTruck.objects.filter(active=True, status="APPROVED")
+            food_trucks = (FoodTruck.objects.filter(
+                active=True,
+                status="APPROVED",
+                latitude__isnull=False,
+                longitude__isnull=False,
+            ).exclude(latitude=0, longitude=0)
+            )
 
             latitude = form.cleaned_data["latitude"]
             longitude = form.cleaned_data["longitude"]
@@ -35,6 +41,11 @@ def index(request):
                 truck.distance = c * r * 1000
 
             food_trucks_nearby = sorted(food_trucks, key=lambda x: x.distance)[:5]
+
+            for truck in food_trucks_nearby:
+                truck.longitude = round(float(truck.longitude), 7)
+                truck.latitude = round(float(truck.latitude), 7)
+
             context["food_trucks_nearby"] = food_trucks_nearby
             context["form"] = form
             return render(request, 'main/index.html', context)
