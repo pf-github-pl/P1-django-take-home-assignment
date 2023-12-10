@@ -1,0 +1,4 @@
+[MASTER]
+load-plugins=pylint_django
+django-settings-module=settings.local
+max-line-length=120
