@@ -52,3 +52,9 @@ python manage.py runserver
 ```
 
 Now, the application should be accessible at [http://localhost:8000](http://localhost:8000).
+
+## If I had more time...
+1. I would have added tests to the project. I would have used pytest and pytest-django to write unit tests for the models and views. I would have also used Selenium to write integration tests for the frontend.
+2. I would have added a map to the frontend. I would have used Google Maps API to display the food trucks on a map.
+3. I would Dockerize the project. I would have used Docker Compose to run the project in a containerized environment.
+4. I would have added a CI/CD pipeline to the project. I would have used GitHub Actions to run the tests and build the Docker image.
