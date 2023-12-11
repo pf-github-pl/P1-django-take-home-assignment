@@ -35,7 +35,6 @@ pip install -r requirements/local.txt
 1. Prepare the database:
 
 ```sh
-python manage.py makemigrations
 python manage.py migrate
 ```
 
