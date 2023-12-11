@@ -2,6 +2,8 @@
 
 The San Francisco Food Trucks Locator project allows users to find the five nearest food trucks in San Francisco based on their current location or manually entered geographical data.
 
+The deployed application is available at [https://foodtruck.dataintel.pl](https://foodtruck.dataintel.pl).
+
 ## Requirements
 
 - Python 3.11
