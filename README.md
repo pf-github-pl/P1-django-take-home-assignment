@@ -41,7 +41,7 @@ python manage.py migrate
 2. Load the food trucks data:
 
 ```sh
-python manage.py loaddata main/fixtures/food_trucks.json
+python manage.py loaddata main/fixtures/foodtrucks.json
 ```
 
 3. Start the development server:
