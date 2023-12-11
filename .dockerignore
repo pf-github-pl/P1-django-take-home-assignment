@@ -1,0 +1,14 @@
+.git/
+.DS_Store
+.idea/
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+setup.cfg
+.pylintrc
+.pre-commit-config.yaml
+*.tar
+*.sh
+htmlcov/
+.coverage
